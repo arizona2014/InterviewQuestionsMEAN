@@ -18,7 +18,7 @@
 
     >Refer to these [instructions on how to not require sudo](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
 
-## Running HotTowel
+## Running HotTowel   
 
 ### Linting
  - Run code analysis using `gulp vet`. This runs jshint, jscs, and plato.
