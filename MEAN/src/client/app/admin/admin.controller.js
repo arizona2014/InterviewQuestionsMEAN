@@ -9,7 +9,7 @@
   /* @ngInject */
   function AdminController(logger) {
     var vm = this;
-    vm.title = 'Admin';
+    vm.title = 'Administration';
 
     activate();
 

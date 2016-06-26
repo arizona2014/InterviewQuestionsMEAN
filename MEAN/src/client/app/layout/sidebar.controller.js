@@ -22,6 +22,7 @@
       }).sort(function(r1, r2) {
         return r1.settings.nav - r2.settings.nav;
       });
+      console.log(vm.navRoutes);
     }
 
     function isCurrent(route) {

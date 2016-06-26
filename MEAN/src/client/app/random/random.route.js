@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app.dashboard')
+    .module('app.random')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
   function getStates() {
     return [
       {
-        state: 'dashboard',
+        state: 'random',
         config: {
-          url: '/',
-          templateUrl: 'app/dashboard/dashboard.html',
-          controller: 'DashboardController',
+          url: '/random',
+          templateUrl: 'app/random/random.html',
+          controller: 'RandomController',
           controllerAs: 'vm',
-          title: 'dashboard',
+          title: 'Random Question',
           settings: {
-            nav:2,
-            content: '<i class="fa fa-dashboard"></i> Dashboard'
+            nav: 3,
+            content: '<i class="fa fa-lock"></i> Random Question'
           }
         }
       }
