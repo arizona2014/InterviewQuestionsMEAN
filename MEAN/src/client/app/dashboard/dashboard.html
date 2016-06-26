@@ -15,7 +15,7 @@
             <li class="borange">
               <div class="pull-left"><i class="fa fa-envelope"></i></div>
               <div class="datas-text pull-right">
-                <span class="bold">{{vm.messageCount}}</span> Messages
+                <span class="bold">{{vm.categories.length}}</span> Categories
               </div>
               <div class="clearfix"></div>
             </li>
@@ -26,23 +26,21 @@
       <div class="row">
         <div class="col-md-6">
           <div class="widget wviolet">
-            <div ht-widget-header title="People" allow-collapse="true"></div>
+            <div ht-widget-header title="Categories" allow-collapse="true"></div>
             <div class="widget-content text-center text-info">
               <table class="table table-condensed table-striped">
                 <thead>
                   <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Age</th>
-                    <th>Location</th>
-                  </tr>
+                    <th>Category Name</th>
+                    <th>Status</th>
+                    <th>N° of questions</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr ng-repeat="p in vm.people">
-                    <td>{{p.firstName}}</td>
-                    <td>{{p.lastName}}</td>
-                    <td>{{p.age}}</td>
-                    <td>{{p.location}}</td>
+                  <tr ng-repeat="p in vm.categories">
+                    <td>{{p.categoryName}}</td>
+                    <td>{{p.categoryStatus}}</td>
+                    <td>{{p.noQuestions}}</td>
                   </tr>
                 </tbody>
               </table>

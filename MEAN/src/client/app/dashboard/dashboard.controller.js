@@ -10,17 +10,17 @@
   function DashboardController($q, dataservice, logger) {
     var vm = this;
     vm.news = {
-      title: 'angularhottowel',
-      description: 'Hot Towel Angular is a SPA template for Angular developers.'
+      title: 'Last Interview Questions Added',
+      description: 'Interview Questions Angular is an MEAN application for managing Job Interview Questions'
     };
     vm.messageCount = 0;
-    vm.people = [];
+    vm.categories = [];
     vm.title = 'Dashboard';
 
     activate();
 
     function activate() {
-      var promises = [getMessageCount(), getPeople()];
+      var promises = [getMessageCount(), getCategories()];
       return $q.all(promises).then(function() {
         logger.info('Activated Dashboard View');
       });
@@ -33,10 +33,10 @@
       });
     }
 
-    function getPeople() {
-      return dataservice.getPeople().then(function(data) {
-        vm.people = data;
-        return vm.people;
+    function getCategories() {
+      return dataservice.getCategories().then(function(data) {
+        vm.categories = data;
+        return vm.categories;
       });
     }
   }

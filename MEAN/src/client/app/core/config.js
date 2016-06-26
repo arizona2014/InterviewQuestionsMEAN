@@ -13,8 +13,8 @@
   }
 
   var config = {
-    appErrorPrefix: '[angularhottowel Error] ',
-    appTitle: 'angularhottowel'
+    appErrorPrefix: '[Interview Questions Error] ',
+    appTitle: 'Interview Questions'
   };
 
   core.value('config', config);

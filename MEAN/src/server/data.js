@@ -1,5 +1,6 @@
 module.exports = {
-  people: getPeople()
+  people: getPeople(),
+  categories: getCategories()
 };
 
 function getPeople() {
@@ -12,5 +13,19 @@ function getPeople() {
     { id: 6, firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina' },
     { id: 7, firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' },
     { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
+  ];
+}
+
+
+function getCategories() {
+  return [
+    { id: 1, categoryName: 'John', categoryStatus: 'Active', noQuestions: 25},
+    { id: 2, categoryName: 'Ward', categoryStatus: 'Active', noQuestions: 31},
+    { id: 3, categoryName: 'Colleen', categoryStatus: 'Active', noQuestions: 21},
+    { id: 4, categoryName: 'Madelyn', categoryStatus: 'Inactive', noQuestions: 18},
+    { id: 5, categoryName: 'Ella', categoryStatus: 'Inactive', noQuestions: 18},
+    { id: 6, categoryName: 'Landon', categoryStatus: 'Active', noQuestions: 11},
+    { id: 7, categoryName: 'Haley', categoryStatus: 'Active', noQuestions: 35},
+    { id: 8, categoryName: 'Aaron', categoryStatus: 'Inactive', noQuestions: 22}
   ];
 }

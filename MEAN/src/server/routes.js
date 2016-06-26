@@ -3,6 +3,7 @@ var four0four = require('./utils/404')();
 var data = require('./data');
 
 router.get('/people', getPeople);
+router.get('/categories', getCategories);
 router.get('/person/:id', getPerson);
 router.get('/*', four0four.notFoundMiddleware);
 
@@ -12,6 +13,10 @@ module.exports = router;
 
 function getPeople(req, res, next) {
   res.status(200).send(data.people);
+}
+
+function getCategories(req, res, next) {
+  res.status(200).send(data.categories);
 }
 
 function getPerson(req, res, next) {
