@@ -15,6 +15,7 @@
     vm.navline = {
       title: config.appTitle,
       text: 'Created by Arizona2014',
+      description: 'Interview Questions Angular is an MEAN application for managing Job Interview Questions',
       link: 'https://github.com/arizona2014'
     };
 
