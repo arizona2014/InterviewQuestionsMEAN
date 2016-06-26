@@ -20,7 +20,7 @@
     activate();
 
     function activate() {
-      var promises = [getMessageCount(), getCategories()];
+      var promises = [getMessageCount(), getCategories(), getLastPeople()];
       return $q.all(promises).then(function() {
         logger.info('Activated Dashboard View');
       });
@@ -39,5 +39,13 @@
         return vm.categories;
       });
     }
+
+    function getLastPeople() {
+      return dataservice.getLastPeople().then(function(data) {
+        vm.people = data;
+        return vm.people;
+      });
+    }  
+      
   }
 })();

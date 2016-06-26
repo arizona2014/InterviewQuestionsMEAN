@@ -5,16 +5,28 @@
     .module('app.random')
     .controller('RandomController', RandomController);
 
-  RandomController.$inject = ['logger'];
+  RandomController.$inject = ['$q', 'dataservice','logger'];
   /* @ngInject */
-  function RandomController(logger) {
+  function RandomController($q, dataservice,logger) {
     var vm = this;
     vm.title = 'Random Question';
+    vm.question = [];
 
     activate();
 
     function activate() {
-      logger.info('Activated Random Question View');
+      var promises = [getRandom()];
+      return $q.all(promises).then(function() {
+        logger.info('Activated Random Question View');
+      });      
     }
+
+    function getRandom() {
+      return dataservice.getRandom().then(function(data) {
+        vm.question = data;
+        return vm.question;
+      });
+    }
+
   }
 })();

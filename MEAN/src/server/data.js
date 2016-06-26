@@ -1,10 +1,34 @@
+var _ = require('lodash');
 module.exports = {
-  people: getPeople(),
-  categories: getCategories()
+  people: getLastPeople(),
+  categories: getCategories(),
+  random: getRandom()
 };
 
-function getPeople() {
-  return [
+
+function getRandom() {
+  
+  var question = [];
+  var questions = [
+    { id: 1, title: 'John', text: 'Papa'},
+    { id: 2, title: 'Ward', text: 'Bell' },
+    { id: 3, title: 'Colleen', text: 'Jones' },
+    { id: 4, title: 'Madelyn', text: 'Green' },
+    { id: 5, title: 'Ella', text: 'Jobs'  },
+    { id: 6, title: 'Landon', text: 'Gates'  },
+    { id: 7, title: 'Haley', text: 'Guthrie' },
+    { id: 8, title: 'Aaron', text: 'Jinglehiemer' }
+  ];
+
+  var indx = _.random(questions.length - 1);
+  question = questions[indx];
+  return question;
+}
+
+function getLastPeople() {
+  
+  var lastPeople = [];
+  var thePeople = [
     { id: 1, firstName: 'John', lastName: 'Papa', age: 25, location: 'Florida' },
     { id: 2, firstName: 'Ward', lastName: 'Bell', age: 31, location: 'California' },
     { id: 3, firstName: 'Colleen', lastName: 'Jones', age: 21, location: 'New York' },
@@ -14,6 +38,9 @@ function getPeople() {
     { id: 7, firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' },
     { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
   ];
+
+  lastPeople = _.slice(thePeople, -3);
+  return lastPeople;
 }
 
 
