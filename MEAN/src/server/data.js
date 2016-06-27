@@ -10,14 +10,11 @@ function getRandom() {
   
   var question = [];
   var questions = [
-    { id: 1, title: 'John', text: 'Papa'},
-    { id: 2, title: 'Ward', text: 'Bell' },
-    { id: 3, title: 'Colleen', text: 'Jones' },
-    { id: 4, title: 'Madelyn', text: 'Green' },
-    { id: 5, title: 'Ella', text: 'Jobs'  },
-    { id: 6, title: 'Landon', text: 'Gates'  },
-    { id: 7, title: 'Haley', text: 'Guthrie' },
-    { id: 8, title: 'Aaron', text: 'Jinglehiemer' }
+    { id: 1, question: 'What is DOM', answer: 'Papa'},
+    { id: 2, question: 'Where is located the DOM', answer: 'Bell' },
+    { id: 3, question: 'Who is the creator of jQuery', answer: 'Jones' },
+    { id: 4, question: 'What is $', answer: 'Green' },
+    { id: 5, question: 'Why we shouldn\'t use jQuery in AngularJS', answer: 'Jobs'  }
   ];
 
   var indx = _.random(questions.length - 1);
