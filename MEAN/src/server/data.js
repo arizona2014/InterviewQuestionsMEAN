@@ -14,7 +14,9 @@ function getRandom() {
     { id: 2, question: 'Where is located the DOM', answer: 'Bell' },
     { id: 3, question: 'Who is the creator of jQuery', answer: 'Jones' },
     { id: 4, question: 'What is $', answer: 'Green' },
-    { id: 5, question: 'Why we shouldn\'t use jQuery in AngularJS', answer: 'Jobs'  }
+    { id: 5, question: 'Why we shouldn\'t use jQuery in AngularJS', answer: 'Jobs'  },
+    { id: 6, question: 'Who is the creator of AngularJS', answer: 'Jones' },
+    { id: 7, question: 'What is ReactJS', answer: 'Green' }
   ];
 
   var indx = _.random(questions.length - 1);
