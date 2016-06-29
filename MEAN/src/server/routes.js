@@ -10,8 +10,6 @@ router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;
 
-//////////////
-
 function getRandom(req, res, next) {
   res.status(200).send(data.random);
 }
