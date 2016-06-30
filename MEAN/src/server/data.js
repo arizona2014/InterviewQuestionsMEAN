@@ -7,9 +7,8 @@ module.exports = {
 
 
 function getRandom() {
-  
-  var question = [];
-  var questions = [
+
+  var questions = [ 
     { id: 1, question: 'What is DOM', answer: 'Papa'},
     { id: 2, question: 'Where is located the DOM', answer: 'Bell' },
     { id: 3, question: 'Who is the creator of jQuery', answer: 'Jones' },
@@ -19,9 +18,11 @@ function getRandom() {
     { id: 7, question: 'What is ReactJS', answer: 'Green' }
   ];
 
-  var indx = _.random(questions.length - 1);
+  var lngt = questions.length - 1;
+  var indx = Math.floor((Math.random() * lngt));
   question = questions[indx];
-  return question;
+  return question; 
+
 }
 
 function getLastPeople() {

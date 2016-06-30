@@ -5,9 +5,9 @@
     .module('app.random')
     .controller('RandomController', RandomController);
 
-  RandomController.$inject = ['$q', 'dataservice','logger'];
+  RandomController.$inject = ['$q', 'dataservice','logger', '$scope'];
   /* @ngInject */
-  function RandomController($q, dataservice,logger) {
+  function RandomController($q, dataservice,logger,$scope) {
     var vm = this;
     vm.title = 'Random Question';
     vm.question = [];
@@ -26,6 +26,12 @@
         vm.question = data;
         return vm.question;
       });
+    }
+
+    $scope.anotherOne = function(){
+      
+      vm.question = getRandom();
+      
     }
 
   }
