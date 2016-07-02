@@ -8,7 +8,7 @@ module.exports = {
 
 function getRandom() {
 
-  var questions = [ 
+  var questions = [
     { id: 1, question: 'What is DOM', answer: 'Papa'},
     { id: 2, question: 'Where is located the DOM', answer: 'Bell' },
     { id: 3, question: 'Who is the creator of jQuery', answer: 'Jones' },
@@ -18,16 +18,13 @@ function getRandom() {
     { id: 7, question: 'What is ReactJS', answer: 'Green' }
   ];
 
-  var lngt = questions.length - 1;
-  var indx = Math.floor((Math.random() * lngt));
-  question = questions[indx];
-  return question; 
+
+  return questions;
 
 }
 
 function getLastPeople() {
-  
-  var lastPeople = [];
+
   var thePeople = [
     { id: 1, firstName: 'John', lastName: 'Papa', age: 25, location: 'Florida' },
     { id: 2, firstName: 'Ward', lastName: 'Bell', age: 31, location: 'California' },
@@ -38,9 +35,8 @@ function getLastPeople() {
     { id: 7, firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' },
     { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
   ];
-
-  lastPeople = _.slice(thePeople, -3);
-  return lastPeople;
+  
+  return _.slice(thePeople, -3);
 }
 
 

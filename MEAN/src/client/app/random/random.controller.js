@@ -14,25 +14,33 @@
 
     activate();
 
+
     function activate() {
       var promises = [getRandom()];
       return $q.all(promises).then(function() {
         logger.info('Activated Random Question View');
-      });      
+        getRandom().then(function(result){
+          var lgt = result.length - 1;
+          var indx = Math.floor(Math.random() * lgt);
+          vm.question = result[indx];
+        });
+      });
     }
 
     function getRandom() {
       return dataservice.getRandom().then(function(data) {
-        vm.question = data;
-        return vm.question;
+        return data;
       });
     }
 
     $scope.anotherOne = function(){
-      
-      vm.question = getRandom();
-      
-    }
+
+      getRandom().then(function(result){
+        var lgt = result.length - 1;
+        var indx = Math.floor(Math.random() * lgt);
+        vm.question = result[indx];
+      });
+    };
 
   }
 })();
