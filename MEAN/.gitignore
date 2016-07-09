@@ -7,3 +7,4 @@ bower_components/
 .tmp
 .idea/vcs.xml
 .idea
+*.xml
